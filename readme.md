@@ -5,11 +5,11 @@
  - project created for the portfolio
  
 ## Technologies Used
- -Spring Boot
- -Spring Form
- -Hibernate
- -Spring Data JPA
- -Spring Security
+-Spring Boot 
+-Spring Form
+-Hibernate
+-Spring Data JPA
+-Spring Security
  
  ## Project Status
  In progress
