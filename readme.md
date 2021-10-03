@@ -1,12 +1,22 @@
-<img alt="Logo" src="http://coderslab.pl/svg/logo-coderslab.svg" width="400">
+# Charity Project - portfolioLab
+> The aim of the project is to create a place where everyone can donate unnecessary things to trusted institutions.
 
+## General Information
+ - project created for the portfolio
+ 
+## Technologies Used
+-Spring Boot 
 
-Przed przystąpieniem do pracy  przeczytaj poniższe wskazówki.
-## Jak zacząć?
+-Spring Form
 
-1. Zaimportuj projekt jako projekt `Maven`, wg poniższych wskazówek:
+-Hibernate
 
-	* W `IntelliJ` wybieramy: `File –> New –> Project from Existing Sources...`
-	* Wskazujemy lokalizację katalogu ze sklonowanym projektem i zatwierdzamy.
-	* Następnie w nowym oknie wybieramy: `Import project from external model` i wskazujemy `Maven`
-	* Wybieramy kolejno opcje: `Next –> Next –> Next –> Finish`
+-Spring Data JPA
+
+-Spring Security
+ 
+ ## Project Status
+ In progress
+
+ ## Contact
+Created by [@MaciejNowak](https://github.com/MaciejArc/)
