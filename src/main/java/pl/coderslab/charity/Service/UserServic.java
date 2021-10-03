@@ -28,4 +28,9 @@ public class UserServic {
 
         return userRepository.save(account);
     }
+
+    public User findByEmail(String email){
+
+       return userRepository.findUserByEmail(email).get();
+    }
 }
