@@ -7,10 +7,12 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import pl.coderslab.charity.Service.UserServic;
 import pl.coderslab.charity.entity.User;
 import pl.coderslab.charity.repository.UserRepository;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
 
@@ -48,7 +50,14 @@ public class UserController {
 
         userServic.registryNewAccount(user);
 
-
         return "index";
+    }
+
+    @GetMapping("/login")
+    public String login(Model model, @RequestParam(required = false) String error){
+if(error != null){
+    model.addAttribute("error","Błedne dane logowania.");
+}
+        return ("login");
     }
 }

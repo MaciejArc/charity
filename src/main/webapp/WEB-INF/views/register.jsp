@@ -24,9 +24,6 @@
             <form:errors path="password"/>
 
         </div>
-        <%--        <div class="form-group">--%>
-        <%--          <input type="password" name="password2" placeholder="Powtórz hasło" />--%>
-        <%--        </div>--%>
 
         <div class="form-group form-group--buttons">
             <a href="login.html" class="btn btn--without-border">Zaloguj się</a>
