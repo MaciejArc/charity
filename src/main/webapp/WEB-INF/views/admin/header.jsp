@@ -15,14 +15,14 @@
 
     <!-- Custom fonts for this template-->
     <%--    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">--%>
-    <link rel="stylesheet" href="<c:url value="resources/css/admin/all.min.css"/>"/>
+    <link rel="stylesheet" href="<c:url value="/resources/css/admin/all.min.css"/>"/>
     <link
             href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
             rel="stylesheet">
 
     <!-- Custom styles for this template-->
     <%--    <link href="css/sb-admin-2.min.css" rel="stylesheet">--%>
-    <link rel="stylesheet" href="<c:url value="resources/css/admin/sb-admin-2.min.css"/>"/>
+    <link rel="stylesheet" href="<c:url value="/resources/css/admin/sb-admin-2.min.css"/>"/>
 
 </head>
 
@@ -139,7 +139,7 @@
 
         <!-- Sidebar Message -->
         <div class="sidebar-card d-none d-lg-flex">
-            <img class="sidebar-card-illustration mb-2" src="<c:url value="resources/images/admin/undraw_rocket.svg"/>"
+            <img class="sidebar-card-illustration mb-2" src="<c:url value="/resources/images/admin/undraw_rocket.svg"/>"
                  alt="...">
             <p class="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components, and
                 more!</p>
@@ -272,7 +272,7 @@
                             <a class="dropdown-item d-flex align-items-center" href="#">
                                 <div class="dropdown-list-image mr-3">
                                     <img class="rounded-circle"
-                                         src="<c:url value="resources/images/admin/undraw_profile_1.svg"/>"
+                                         src="<c:url value="/resources/images/admin/undraw_profile_1.svg"/>"
                                          alt="...">
                                     <div class="status-indicator bg-success"></div>
                                 </div>
@@ -286,7 +286,7 @@
                             <a class="dropdown-item d-flex align-items-center" href="#">
                                 <div class="dropdown-list-image mr-3">
                                     <img class="rounded-circle"
-                                         src="<c:url value="resources/images/admin/undraw_profile_2.svg"/>"
+                                         src="<c:url value="/resources/images/admin/undraw_profile_2.svg"/>"
                                          alt="...">
                                     <div class="status-indicator"></div>
                                 </div>
@@ -300,7 +300,7 @@
                             <a class="dropdown-item d-flex align-items-center" href="#">
                                 <div class="dropdown-list-image mr-3">
                                     <img class="rounded-circle"
-                                         src="<c:url value="resources/images/admin/undraw_profile_3.svg"/>"
+                                         src="<c:url value="/resources/images/admin/undraw_profile_3.svg"/>"
                                          alt="...">
                                     <div class="status-indicator bg-warning"></div>
                                 </div>
@@ -336,7 +336,7 @@
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
                             <img class="img-profile rounded-circle"
-                                 src="<c:url value="resources/images/admin/undraw_profile_1.svg"/>">
+                                 src="<c:url value="/resources/images/admin/undraw_profile_1.svg"/>">
                         </a>
                         <!-- Dropdown - User Information -->
                         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"

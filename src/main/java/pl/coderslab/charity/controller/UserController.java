@@ -1,18 +1,16 @@
 package pl.coderslab.charity.controller;
 
 
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import pl.coderslab.charity.Service.UserServic;
+import pl.coderslab.charity.Service.UserService;
 import pl.coderslab.charity.entity.User;
 import pl.coderslab.charity.repository.UserRepository;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
 
@@ -21,12 +19,12 @@ import javax.validation.Valid;
 public class UserController {
 
     private final UserRepository userRepository;
-    private final UserServic userServic;
+    private final UserService userService;
 
 
-    public UserController(UserRepository userRepository, UserServic userServic) {
+    public UserController(UserRepository userRepository, UserService userService) {
         this.userRepository = userRepository;
-        this.userServic = userServic;
+        this.userService = userService;
     }
 
     @GetMapping("/register")
@@ -48,7 +46,7 @@ public class UserController {
             return "register";
         }
 
-        userServic.registryNewAccount(user);
+        userService.registryNewAccount(user);
 
         return "index";
     }

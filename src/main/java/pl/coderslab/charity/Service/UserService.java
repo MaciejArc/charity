@@ -7,12 +7,12 @@ import pl.coderslab.charity.entity.User;
 import pl.coderslab.charity.repository.UserRepository;
 
 @Configuration
-public class UserServic {
+public class UserService {
 
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
 
-    public UserServic(UserRepository userRepository, PasswordEncoder passwordEncoder) {
+    public UserService(UserRepository userRepository, PasswordEncoder passwordEncoder) {
         this.userRepository = userRepository;
         this.passwordEncoder = passwordEncoder;
     }

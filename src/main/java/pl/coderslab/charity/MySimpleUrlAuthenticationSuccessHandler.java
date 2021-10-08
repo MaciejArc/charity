@@ -16,7 +16,7 @@ public class MySimpleUrlAuthenticationSuccessHandler implements AuthenticationSu
         User principal =(User) authentication.getPrincipal();
         String roles = principal.getRoles();
         if(roles.equals("ROLE_ADMIN")){
-            httpServletResponse.sendRedirect("/admin");
+            httpServletResponse.sendRedirect("/admin/dashboard");
         }else {
             httpServletResponse.sendRedirect("/");
         }
