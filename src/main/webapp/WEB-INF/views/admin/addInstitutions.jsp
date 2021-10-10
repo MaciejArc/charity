@@ -13,15 +13,16 @@
         <div class="card-body">
             <form:form modelAttribute="institution">
                 <label>
-                    <p>Nazwa instytucji</p>
-                    <form:input path="name"/>
+                    Nazwa instytucji<br>
+                    <form:input path="name"/><form:errors path="name"/>
                 </label>
-
+                <br>
 
                 <label>
-                    <p>Opis instytucji</p>
-                    <form:input path="descriptions"/>
+                    Opis instytucji<br>
+                    <form:input path="description"/><form:errors path="description"/>
                 </label>
+                <br>
                 <button type="submit">Wyślij</button>
 
             </form:form>

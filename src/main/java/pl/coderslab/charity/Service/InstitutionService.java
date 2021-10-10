@@ -19,4 +19,16 @@ public class InstitutionService {
         return all;
 
     }
+
+    public Institution addNewInstitution(Institution institution){
+        return institutionRepository.save(institution);
+
+    }
+    public Institution findInstitutionById(Long id){
+        return institutionRepository.findById(id).get();
+    }
+
+    public void deteteInstitution(Institution institution){
+        institutionRepository.delete(institution);
+    }
 }

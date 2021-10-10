@@ -29,7 +29,9 @@
                             <td>${institution.id}</td>
                             <td>${institution.name}</td>
                             <td>${institution.description}</td>
-                            <td>usun</td>
+                            <td><a href="http://localhost:8080/admin/deleteInstitution?id=${institution.id}">Usuń</a>
+                                <a href="http://localhost:8080/admin/addInstitution?id=${institution.id}">Edytuj</a>
+                            </td>
                         </tr>
 
 
