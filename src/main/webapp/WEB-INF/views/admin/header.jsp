@@ -47,7 +47,7 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item active">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="http://localhost:8080/admin/dashboard">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Dashboard</span></a>
         </li>
@@ -65,6 +65,11 @@
             <a class="nav-link" href="http://localhost:8080/admin/institution">
                 <i class="fas fa-fw fa-university"></i>
                 <span>Instytucje</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="http://localhost:8080/admin/users">
+                <i class="fas fa-fw fa-user"></i>
+                <span>Użytkownicy</span></a>
         </li>
 
         <!-- Nav Item - Utilities Collapse Menu -->

@@ -3,13 +3,13 @@
 <%@ taglib prefix="from" uri="http://www.springframework.org/tags/form" %>
 <%@ include file="header.jsp" %>
 <div class="container-fluid">
-    <h1 class="h3 mb-2 text-gray-800">Lista instytucji</h1>
+    <h1 class="h3 mb-2 text-gray-800">Lista użytkowników</h1>
 
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Instytucje:</h6>
-            <p><a href="http://localhost:8080/admin/addInstitution">Dodaj nową instytucje</a> </p>
+            <h6 class="m-0 font-weight-bold text-primary">Użytkownicy:</h6>
+            <p><a href="http://localhost:8080/admin/addUser">Dodaj nowego użytkownika</a> </p>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -20,17 +20,19 @@
                         <th>Nazwa</th>
                         <th>Opis</th>
                         <th>Akcja</th>
+                        <th>Akcja</th>
 
                     </tr>
                     </thead>
                     <tbody>
-                    <c:forEach items="${institutionList}" var="institution">
+                    <c:forEach items="${usersList}" var="user">
                         <tr>
-                            <td>${institution.id}</td>
-                            <td>${institution.name}</td>
-                            <td>${institution.description}</td>
-                            <td><a href="http://localhost:8080/admin/deleteInstitution?id=${institution.id}">Usuń</a>
-                                <a href="http://localhost:8080/admin/addInstitution?id=${institution.id}">Edytuj</a>
+                            <td>${user.id}</td>
+                            <td>${user.firstName}</td>
+                            <td>${user.lastName}</td>
+                            <td>${user.email}</td>
+                            <td><a href="http://localhost:8080/admin/deleteUser?id=${user.id}">Usuń</a>
+                                <a href="http://localhost:8080/admin/editUser?id=${user.id}">Edytuj</a>
                             </td>
                         </tr>
 
