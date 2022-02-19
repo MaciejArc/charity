@@ -32,7 +32,13 @@ public class UserService {
         return userRepository.save(account);
     }
 
+public void lockUser(String id){
+        User user = userRepository.findById(Long.parseLong(id)).get();
 
+       user.setNotLock(false);
+userRepository.save(user);
+
+}
 
     public User findByEmail(String email) {
 

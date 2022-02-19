@@ -6,6 +6,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import pl.coderslab.charity.Service.InstitutionService;
 import pl.coderslab.charity.Service.UserService;
 import pl.coderslab.charity.entity.Institution;
@@ -120,6 +121,12 @@ public class AdminController {
 
         userService.registryNewAccount(user);
 
+        return "redirect:/admin/users";
+    }
+
+    @GetMapping("/lockUser")
+    public String lockUser(@RequestParam(value = "id") String id){
+        userService.lockUser(id);
         return "redirect:/admin/users";
     }
 

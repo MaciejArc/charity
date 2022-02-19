@@ -38,6 +38,8 @@ public class User implements UserDetails {
 
     private String roles = "ROLE_USER";
 
+    private boolean notLock = true;
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return Collections.singleton(new SimpleGrantedAuthority(roles));

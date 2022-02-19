@@ -33,6 +33,7 @@
                             <td>${user.email}</td>
                             <td><a href="http://localhost:8080/admin/deleteUser?id=${user.id}">Usuń</a>
                                 <a href="http://localhost:8080/admin/editUser?id=${user.id}">Edytuj</a>
+                                <a href="http://localhost:8080/admin/lockUser?id=${user.id}">Zablokuj</a>
                             </td>
                         </tr>
 
