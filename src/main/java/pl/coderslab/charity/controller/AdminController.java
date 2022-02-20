@@ -78,8 +78,14 @@ public class AdminController {
     @GetMapping("/deleteUser")
     public String deleteUser(HttpServletRequest request) {
         User user = userService.findById(Long.parseLong(request.getParameter("id")));
-        userService.deleteUser(user);
-        return "redirect:/admin/users";
+        if(user.getRoles().equals("ROLE_USER")){
+            userService.deleteUser(user);
+            return "redirect:/admin/users";
+        }else {
+            userService.deleteUser(user);
+            return "redirect:/admin/admins";
+        }
+
 
     }
     @GetMapping("/editUser")
@@ -94,8 +100,14 @@ public class AdminController {
         if(result.hasErrors()){
             return "/admin/editUser";
         }else {
-            userService.editUser(user);
-            return "redirect:/admin/users";
+            if (user.getRoles().equals("ROLE_USER")){
+                userService.editUser(user);
+                return "redirect:/admin/users";
+            }else {
+                userService.editAdmin(user);
+                return "redirect:/admin/admins";
+            }
+
         }
 
     }
@@ -128,6 +140,33 @@ public class AdminController {
     public String lockUser(@RequestParam(value = "id") String id){
         userService.lockUser(id);
         return "redirect:/admin/users";
+    }
+
+    @GetMapping("/admins")
+    public String admins(Model model){
+        model.addAttribute("adminsList",userService.adminList());
+        return "/admin/admins";
+
+    }
+
+    @GetMapping("/addAdmin")
+    public String addAdmin(Model model){
+        model.addAttribute("user",new User());
+        return "/admin/addAdmin";
+    }
+    @PostMapping("/addAdmin")
+    public String addAdminPost(@Valid User user,BindingResult result, Model model){
+        if (result.hasErrors()){
+            return "/admin/addAdmin";
+        }
+        if(userService.findByEmailOpt(user.getEmail()).isPresent()){
+            model.addAttribute("error", "Użytkownik o podanym adresie email istnieje!");
+            return "/admin/addAdmin";
+        }
+      userService.registryNewAdmin(user);
+
+
+        return "redirect:/admin/admins";
     }
 
 

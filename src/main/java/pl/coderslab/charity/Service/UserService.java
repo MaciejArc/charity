@@ -31,6 +31,12 @@ public class UserService {
 
         return userRepository.save(account);
     }
+    public User registryNewAdmin(User user){
+        user.setRoles("ROLE_ADMIN");
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
+        return userRepository.save(user);
+
+    }
 
 public void lockUser(String id){
         User user = userRepository.findById(Long.parseLong(id)).get();
@@ -53,15 +59,27 @@ userRepository.save(user);
     }
 
     public List<User> userList() {
-        return userRepository.findAll();
+        return userRepository.findUsersByRoles("ROLE_USER");
     }
+
+
 
     public void deleteUser(User user){
         userRepository.delete(user);
     }
 
     public void editUser(User user){
+User user1 = userRepository.findById(user.getId()).get();
+user.setPassword(user1.getPassword());
         userRepository.save(user);
+    }
+    public void editAdmin(User user){
+        user.setRoles("ROLE_ADMIN");
+        userRepository.save(user);
+    }
+
+    public List<User> adminList(){
+        return userRepository.findUsersByRoles("ROLE_ADMIN");
     }
 
 }

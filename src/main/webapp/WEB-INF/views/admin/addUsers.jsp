@@ -24,12 +24,12 @@
                 </label>
                 <br>
                 <label>
-                    Nazwisko<br>
+                    Email<br>
                     <form:input path="email"/><form:errors path="email"/>
                 </label>
                 <br>
                 <label>
-                    Nazwisko<br>
+                    Hasło<br>
                     <form:password path="password"/><form:errors path="password"/>
                 </label>
                 <br>

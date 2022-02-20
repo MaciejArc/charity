@@ -71,6 +71,11 @@
                 <i class="fas fa-fw fa-user"></i>
                 <span>Użytkownicy</span></a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link" href="http://localhost:8080/admin/admins">
+                <i class="fas fa-fw fa-user-circle"></i>
+                <span>Administratorzy</span></a>
+        </li>
 
         <!-- Nav Item - Utilities Collapse Menu -->
         <li class="nav-item">

@@ -17,9 +17,9 @@
                     <thead>
                     <tr>
                         <th>Id</th>
-                        <th>Nazwa</th>
-                        <th>Opis</th>
-                        <th>Akcja</th>
+                        <th>Imię</th>
+                        <th>Nazwisko</th>
+                        <th>Email</th>
                         <th>Akcja</th>
 
                     </tr>
