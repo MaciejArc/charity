@@ -97,10 +97,11 @@ public class AdminController {
     }
     @PostMapping("/editUser")
     public String editUserPost(@Valid User user, BindingResult result, Model model){
+        User userOld = userService.findById(user.getId());
         if(result.hasErrors()){
             return "/admin/editUser";
         }else {
-            if (user.getRoles().equals("ROLE_USER")){
+            if (userOld.getRoles().equals("ROLE_USER")){
                 userService.editUser(user);
                 return "redirect:/admin/users";
             }else {

@@ -39,7 +39,8 @@ public class User implements UserDetails {
     private String roles = "ROLE_USER";
 
     private boolean notLock = true;
-
+@Transient
+    private String fullName;
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return Collections.singleton(new SimpleGrantedAuthority(roles));
@@ -68,5 +69,13 @@ public class User implements UserDetails {
     @Override
     public boolean isEnabled() {
         return true;
+    }
+
+    public String getFullName() {
+        return String.format("%s %s", getFirstName(), getLastName());
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 }
